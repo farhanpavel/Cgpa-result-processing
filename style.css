@@ -1,0 +1,45 @@
+body{
+   background-image: url(./image/Jahangirnagar\ University\ \(1\).jpeg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+} 
+.header-head{
+   background-color: rgb(0, 0, 0,0.3);
+}
+.one{
+   width: 250px;
+}
+.two{
+   width:100px;
+ 
+}
+.row{
+   margin-left: 0;
+   margin-right: 0;
+}
+.main-head{
+   margin-top: 5px;
+}
+.main-head marquee{
+   font-size: 14px;
+   font-family: 'Roboto', sans-serif;
+   color: rgb(57, 2, 2);
+}
+.main-body{
+   margin-top: 100px;
+}
+.sub-one h1{
+margin-bottom: 3%;
+font-family: 'Roboto Slab', serif;
+color: rgb(255, 255, 255);
+}
+.main-btn{
+margin-top: -50%;
+
+}
+/* @media only screen and (max-width: 768px) {
+   body {
+     background-size: 100% auto;
+   }
+ } */
