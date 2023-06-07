@@ -1,0 +1,123 @@
+body{
+    background-color: #f5f5f5;
+}
+.start{
+margin-bottom: 80px;
+}
+.start h5{
+    font-family: Inter, sans-serif;
+    font-weight: lighter;
+    color: #666666;
+    font-size: 17px;
+}
+.shob{
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 2%;
+}
+.start h1{
+font-family: Inter, sans-serif;
+font-weight: bolder;
+font-size: 50px;
+}
+
+.shob-two {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+input{
+    width: 120px;
+    outline: none;
+    border: none;
+}
+.shob-two button{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.shob-three h1{
+font-family: Inter, sans-serif;
+font-weight: bolder;
+font-size: 50px;
+}
+.shob-three h5{
+    font-family: Inter, sans-serif;
+    font-weight: lighter;
+    color: #666666;
+    font-size: 17px;
+}
+.changer td,tr{
+  border: 1px solid #cccc;
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+.delete-icon td,tr{
+  border: none;
+  
+}
+
+.shob-four{
+    margin-top: 80px;
+    padding: 40px;
+  
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+.shob-four h5{
+    font-size: 15px;
+    color: black;
+}
+.shob-five h5{
+    font-size: 10px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+  i:hover{
+color: red;
+cursor: pointer;
+  }
+  .message-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.15);
+   text-align: left;
+  }
+  .message-box h2{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .message-box h3{
+    font-size: 15px;
+    padding: 5px;
+  }
+  .rating{
+    text-align: center;
+  }
+  .message-box img{
+    width: 250px;
+  }
+
+  .rating {
+    direction: rtl; /* set the direction to right-to-left */
+  }
+  
+  .rating i:hover,
+  .rating i:hover ~ .fa-star {
+    color: red;
+    direction: ltr; /* set the direction to left-to-right */
+  }
+.dekhi{
+    width: 100px;
+}
+.hide{
+  display: none;
+}
+

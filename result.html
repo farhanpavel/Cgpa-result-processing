@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/463b3f8166.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <header>
+        <div class="shob">
+            <div class="start text-center">
+                <h1>Manual Check</h1>
+                <h5>Input and get the output</h5>
+            </div>
+            <div class="shob-two mb-5">
+            <table class="table  changer">
+                <tr>
+                    <td><input type="text" placeholder="Subject Name"></td>
+                    <td><input type="text" placeholder="Incourse Mark"></td>
+                    <td><input type="text" placeholder="Credit"></td>
+                    <td><input type="text" id="examiner1" placeholder="1st Examiner"></td>
+                    <td><input type="text" id="examiner2" placeholder="2nd Examiner"></td>
+                    <td><input class="bg-secondary" type="text" id="examiner3" placeholder="3rd Examiner" disabled></td> 
+                    <td><input type="text" placeholder="Final Mark"></td>
+                  </tr>
+            </table>
+            <button class="btn btn-info text-white" onclick="addRow()">Add</button>
+            <button class="btn btn-info text-white">View Result</button>
+        </div>
+         <div class="text-center shob-three">
+            <h1 >Check By Excel File</h1>
+            <h5>Open and view Result by Excel files</h5>
+           
+            <div class="shob-four mb-3" ondragover="event.preventDefault()" ondrop="handleFileDrop(event)">
+                <button class="mb-3 btn btn-info text-white" onclick="browseFile()">Browse File</button>
+                <h5>Or Drag it in this box</h5>
+            </div>
+            <div class="shob-five">
+                <h5>Developed by: Pavel & Walid</h5>
+            </div>
+         </div>
+    <!--  -->
+    <div id="message-box" class="message-box hide">
+        <img src="https://i.pinimg.com/originals/0f/38/bc/0f38bcfc9f00c42803c00eedcb87159b.gif" alt="GIF">
+        <h2>Rate the page :)</h2>
+        <div class="rating">
+          <i class="fa fa-star" data-rating="1"></i>
+          <i class="fa fa-star" data-rating="2"></i>
+          <i class="fa fa-star" data-rating="3"></i>
+          <i class="fa fa-star" data-rating="4"></i>
+          <i class="fa fa-star" data-rating="5"></i>
+        </div>
+       
+      </div>
+      
+      
+    </div>
+          
+    </header>  
+
+<!--Js -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="result.js"></script>
+
+</body>
+</html>
