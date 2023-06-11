@@ -50,7 +50,11 @@ font-size: 50px;
   border: 1px solid #cccc;
   border-collapse: collapse;
   width: 100%;
-  
+}
+.changer-two td,tr{
+  border: 1px solid #cccc;
+  border-collapse: collapse;
+  width: 100%;
 }
 .delete-icon td,tr{
   border: none;
@@ -73,6 +77,18 @@ font-size: 50px;
     font-size: 10px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+}
+.shob-six {
+  display: none;
+  margin-top: 80px;
+ 
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.shob-six.active {
+  display: block;
 }
 
   i:hover{
@@ -102,7 +118,7 @@ cursor: pointer;
     text-align: center;
   }
   .message-box img{
-    width: 250px;
+    width: 150px;
   }
 
   .rating {

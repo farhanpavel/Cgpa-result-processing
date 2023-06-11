@@ -3,7 +3,6 @@ function showLoader(url) {
     var loader = document.createElement('div');
     loader.className = 'loader-overlay';
     document.body.appendChild(loader);
-  
     // Delay the page navigation
     setTimeout(function() {
       window.location.href = url;
@@ -12,6 +11,6 @@ function showLoader(url) {
   }
   // Adding sound
   function playClickSound() {
-    var audio = new Audio('mouse.mp3');
+    var audio = new Audio('../music/mouse.mp3');
     audio.play();
   }

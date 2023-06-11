@@ -1,4 +1,4 @@
-
+///This Function is Used For the adding button.
 function addRow() {
   var table = document.querySelector('.changer'); // Get the table element
   var newRow = table.insertRow(table.rows.length); // Insert a new row at the end of the table
@@ -56,7 +56,7 @@ function addRow() {
   }
 }
 
-// Disabling
+//This part is used for the first line of the manual input .
 const examiner1Input = document.getElementById('examiner1');
 const examiner2Input = document.getElementById('examiner2');
 const examiner3Input = document.getElementById('examiner3');
@@ -65,11 +65,11 @@ examiner1Input.addEventListener('input', enableThirdExaminer);
 examiner2Input.addEventListener('input', enableThirdExaminer);
 
 function enableThirdExaminer() {
-  const examiner1Value = parseFloat(examiner1Input.value) || 0;
-  const examiner2Value = parseFloat(examiner2Input.value) || 0;
+  const examiner1Value = parseFloat(examiner1Input.value);
+  const examiner2Value = parseFloat(examiner2Input.value);
   const diff = Math.abs(examiner1Value - examiner2Value);
 
-  if (examiner1Value && examiner2Value && diff >= 12) {
+  if (!isNaN(examiner1Value) && !isNaN(examiner2Value) && diff >= 12) {
     examiner3Input.disabled = false;
     examiner3Input.classList.remove('bg-secondary');
     examiner3Input.style.backgroundColor = 'white';
@@ -79,35 +79,128 @@ function enableThirdExaminer() {
     examiner3Input.style.backgroundColor = '';
   }
 }
+//This part is used for excell file reader
+function handleFileDrop(event) {
+  event.preventDefault();
+  const file = event.dataTransfer.files[0];
+  handleFileSelect(file);
+}
 
-//
 function browseFile() {
-  var fileInput = document.createElement('input');
-  fileInput.type = 'file';
-  fileInput.addEventListener('change', handleFileSelect);
+  const fileInput = document.getElementById('fileInput');
   fileInput.click();
 }
 
-function handleFileSelect(event) {
-  var file = event.target.files[0];
-  displayFileName(file.name);
+function handleFileSelect(file) {
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    const data = new Uint8Array(e.target.result);
+    const workbook = XLSX.read(data, { type: 'array' });
+
+    const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+    const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+    const table = document.getElementById('dataTable');
+
+    // Clear existing rows except the header row
+    while (table.rows.length > 1) {
+      table.deleteRow(1);
+    }
+
+    // Populate the table with data from the Excel file
+    for (let i = 0; i < jsonData.length; i++) {
+      const newRow = table.insertRow(i + 1);
+
+      for (let j = 0; j < jsonData[i].length; j++) {
+        const cellValue = jsonData[i][j];
+        const newCell = newRow.insertCell(j);
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = cellValue;
+        newCell.appendChild(input);
+      }
+
+      const deleteIconCell = newRow.insertCell();
+      deleteIconCell.style.border = 'none';
+      deleteIconCell.style.outline = 'none';
+      deleteIconCell.innerHTML = '<i class="fa-regular fa-circle-xmark fa-2xl delete-icon"></i>';
+
+      const deleteIcon = deleteIconCell.querySelector('.delete-icon');
+      deleteIcon.addEventListener('click', function() {
+        const row = this.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+      });
+
+      const firstExaminerInput = newRow.querySelector('td:nth-child(4) input');
+      const secondExaminerInput = newRow.querySelector('td:nth-child(5) input');
+      const thirdExaminerInput = newRow.querySelector('td:nth-child(6) input');
+
+      thirdExaminerInput.classList.add('bg-secondary');
+      thirdExaminerInput.disabled = true;
+
+      firstExaminerInput.addEventListener('input', handleExaminerInputChange);
+      secondExaminerInput.addEventListener('input', handleExaminerInputChange);
+
+      function handleExaminerInputChange() {
+        const firstExaminerValue = parseFloat(firstExaminerInput.value);
+        const secondExaminerValue = parseFloat(secondExaminerInput.value);
+
+        const difference = Math.abs(firstExaminerValue - secondExaminerValue);
+
+        if (difference >= 12) {
+          thirdExaminerInput.disabled = false;
+          thirdExaminerInput.classList.remove('bg-secondary');
+          thirdExaminerInput.style.backgroundColor = 'white';
+        } else {
+          thirdExaminerInput.disabled = true;
+          thirdExaminerInput.classList.add('bg-secondary');
+          thirdExaminerInput.style.backgroundColor = '';
+        }
+      }
+    }
+
+    const fileContainer = document.getElementById('fileContainer');
+    fileContainer.classList.add('active');
+
+    fileContainer.scrollIntoView({ behavior: 'smooth' });
+
+    const fileName = file.name;
+    displayFileName(fileName);
+  };
+
+  reader.readAsArrayBuffer(file);
 }
 
-function handleFileDrop(event) {
-  event.preventDefault();
-  var file = event.dataTransfer.files[0];
-  displayFileName(file.name);
+function browseFile() {
+  const fileInput = document.getElementById('fileInput');
+  fileInput.click();
 }
+
 
 function displayFileName(fileName) {
   var box = document.querySelector('.shob-four');
   box.querySelector('h5').textContent = fileName;
 }
 
-// Function to show the message box
+// this Function used to show the message box
 function showMessage() {
+  
   var messageBox = document.getElementById('message-box');
   messageBox.classList.remove('hide');
+   // Play the music when it's ready
+   var audio = new Audio('../music/Notification.mp3');
+   audio.addEventListener('canplaythrough', function() {
+     audio.play();
+   });
+ 
+   audio.addEventListener('error', function() {
+     console.log('Failed to load the audio file');
+   });
+ 
+   // Start loading the audio
+   audio.load();
+
 }
 
 // Wait for 5 seconds and show the message box

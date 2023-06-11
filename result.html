@@ -7,10 +7,12 @@
     <title>Result</title>
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/463b3f8166.js" crossorigin="anonymous"></script>
+    <!-- xlsx -->
+    <script src="./js/xlsx.js"></script>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="result.css">
+    <link rel="stylesheet" href="./css/result.css">
 </head>
 <body>
     <header>
@@ -39,9 +41,23 @@
             <h5>Open and view Result by Excel files</h5>
            
             <div class="shob-four mb-3" ondragover="event.preventDefault()" ondrop="handleFileDrop(event)">
-                <button class="mb-3 btn btn-info text-white" onclick="browseFile()">Browse File</button>
-                <h5>Or Drag it in this box</h5>
+              <button class="mb-3 btn btn-info text-white" onclick="browseFile()">Browse File</button>
+              <h5>Or Drag it in this box</h5>
+              <input type="file" id="fileInput" style="display: none" onchange="handleFileSelect(this.files[0])">
             </div>
+            
+              <div class="shob-six mb-3" id="fileContainer">
+                <input type="file" id="fileInput" accept=".xlsx, .xls" style="display: none" onchange="handleFileSelect(event)" />
+                <table id="dataTable" class="table changer-two">
+                  <tr>
+                    <!-- Add more columns as needed -->
+                  </tr>
+                  <!-- Existing rows here -->
+                </table>
+                <button class="btn btn-info text-white mb-5">View Result</button>
+              </div>
+              
+              
             <div class="shob-five">
                 <h5>Developed by: Pavel & Walid</h5>
             </div>
@@ -49,7 +65,7 @@
     <!--  -->
     <div id="message-box" class="message-box hide">
         <img src="https://i.pinimg.com/originals/0f/38/bc/0f38bcfc9f00c42803c00eedcb87159b.gif" alt="GIF">
-        <h2>Rate the page :)</h2>
+        <h2>Rate the page 😄 </h2>
         <div class="rating">
           <i class="fa fa-star" data-rating="1"></i>
           <i class="fa fa-star" data-rating="2"></i>
@@ -68,7 +84,7 @@
 <!--Js -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-<script src="result.js"></script>
+<script src="./js/result.js"></script>
 
 </body>
 </html>
