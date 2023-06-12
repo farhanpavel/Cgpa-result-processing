@@ -111,7 +111,7 @@ function handleFileSelect(file) {
     // Populate the table with data from the Excel file
     for (let i = 0; i < jsonData.length; i++) {
       const newRow = table.insertRow(i + 1);
-
+    
       for (let j = 0; j < jsonData[i].length; j++) {
         const cellValue = jsonData[i][j];
         const newCell = newRow.insertCell(j);
@@ -120,34 +120,34 @@ function handleFileSelect(file) {
         input.value = cellValue;
         newCell.appendChild(input);
       }
-
+    
       const deleteIconCell = newRow.insertCell();
       deleteIconCell.style.border = 'none';
       deleteIconCell.style.outline = 'none';
       deleteIconCell.innerHTML = '<i class="fa-regular fa-circle-xmark fa-2xl delete-icon"></i>';
-
+    
       const deleteIcon = deleteIconCell.querySelector('.delete-icon');
       deleteIcon.addEventListener('click', function() {
         const row = this.parentNode.parentNode;
         row.parentNode.removeChild(row);
       });
-
+    
       const firstExaminerInput = newRow.querySelector('td:nth-child(4) input');
       const secondExaminerInput = newRow.querySelector('td:nth-child(5) input');
       const thirdExaminerInput = newRow.querySelector('td:nth-child(6) input');
-
+    
       thirdExaminerInput.classList.add('bg-secondary');
       thirdExaminerInput.disabled = true;
-
+    
       firstExaminerInput.addEventListener('input', handleExaminerInputChange);
       secondExaminerInput.addEventListener('input', handleExaminerInputChange);
-
+    
       function handleExaminerInputChange() {
         const firstExaminerValue = parseFloat(firstExaminerInput.value);
         const secondExaminerValue = parseFloat(secondExaminerInput.value);
-
+    
         const difference = Math.abs(firstExaminerValue - secondExaminerValue);
-
+    
         if (difference >= 12) {
           thirdExaminerInput.disabled = false;
           thirdExaminerInput.classList.remove('bg-secondary');
@@ -158,6 +158,11 @@ function handleFileSelect(file) {
           thirdExaminerInput.style.backgroundColor = '';
         }
       }
+    
+      // Dispatch input event manually after event listeners are set
+      const event = new Event('input');
+      firstExaminerInput.dispatchEvent(event);
+      secondExaminerInput.dispatchEvent(event);
     }
 
     const fileContainer = document.getElementById('fileContainer');
