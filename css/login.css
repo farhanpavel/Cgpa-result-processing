@@ -1,0 +1,104 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    overflow: hidden;
+    background-color: #01bdf1;
+    }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+ 
+  .wrapper {
+    background-color: #f1f1f1;
+    padding: 60px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1.2);
+  }
+  
+
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title span {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+
+  .row i {
+    margin-right: 10px;
+    color: #888;
+  }
+  
+
+  .row input[type="text"],
+  .row input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  .changer button{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    padding: 7px;
+    background-color: #01bdf1;
+    
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    margin-top: 7px;
+  }
+  .changer a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .button input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #01bdf1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+ 
+  .signup-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .signup-link a {
+    color: #ec0d18;
+    text-decoration: none;
+  }
+  .signup-link a:hover{
+    text-decoration: underline;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  

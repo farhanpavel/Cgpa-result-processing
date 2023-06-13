@@ -2,11 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Registration</title>
+    <link rel="stylesheet" href="../css/registration.css">
 </head>
 <body>
-    <h1>byr</h1>
+    <div class="container">
+        <div class="wrapper">
+            <div class="title">
+                <span>User Registration Form</span>
+            </div>
+            <form action="#" method="post">
+                <div class="row">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" name="username" required>
+                </div>
+                <div class="row">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="row">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <div class="row">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password" name="confirm_password" required>
+                </div>
+                <div class="row button">
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="login-link">Already have an account? <a href="login.html">Login here</a></div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
