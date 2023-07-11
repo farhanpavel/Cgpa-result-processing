@@ -1,104 +1,173 @@
-
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body{
+*{
+    font-family:'Times New Roman', Times, serif;
     overflow: hidden;
-    background-color: #01bdf1;
-    }
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
- 
-  .wrapper {
-    background-color: #f1f1f1;
-    padding: 60px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 1.2);
-  }
-  
-
-  .title {
+}
+.header-head{
     text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .title span {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-
-  .row {
+    border: 1px solid #cccccc;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
-  }
-  
-
-  .row i {
-    margin-right: 10px;
-    color: #888;
-  }
-  
-
-  .row input[type="text"],
-  .row input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-  }
-  .changer button{
-    display: block;
     margin: 0 auto;
-    width: 150px;
-    padding: 7px;
-    background-color: #01bdf1;
-    
-    border: none;
-    cursor: pointer;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    margin-top: 7px;
-  }
-  .changer a{
-    text-decoration: none;
-    color: white;
-  }
-
-  .button input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #01bdf1;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
- 
-  .signup-link {
-    text-align: center;
     margin-top: 10px;
-  }
-  
-  .signup-link a {
-    color: #ec0d18;
+    color: rgb(27, 26, 26);
+    width: 400px; 
+
+}
+
+.footer-head{
+margin-top: 10px;
+width: 400px; 
+
+}
+.header-head img{
+    width:150px;
+    height: 130px;
+    margin-top: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    
+   
+}
+.texty input{
+    width: 270px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    padding-left: 7px;
+    border-radius: 5px;
+    
+}
+::placeholder{
+    font-size: 10px;
+    color: rgb(27, 26, 26);
+   
+}
+.texty button{
+    margin-top: 10px;
+    width: 270px;
+    height: 30px;
+    margin-bottom: 10px;
+    border:none;
+    border-radius: 5px;
+    background-color: #4CB5F9;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+   
+}
+
+.texty-2 h2{
+    font-size: 15px;
+    padding-bottom: 15px;
+    max-width: 100%;
+    font-weight: bold;
+}
+.texty-2 span hr{
+  width: 150px;
+
+}
+.header-head #one hr{
+    position: relative;
+    top:25px;
+    right: 90px;
+}
+.header-head #two hr{
+    position: relative;
+    top:-40.5px;
+    left: 90px;
+}
+.texty-3{
+    padding-bottom: 40px;
+ 
+}
+.texty-3 a{
     text-decoration: none;
-  }
-  .signup-link a:hover{
+    color: navy;
+    margin-left: 2px;
+   
+    
+}
+#four a{
+    margin-top: 40px;
+    font-size: 13px;
+    color:rgb(27, 26, 26) ;
+ 
+}
+#four a:hover{
     text-decoration: underline;
+}
+.spacing{
+    margin-bottom: 20px;
+}
+.header-head::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+/*  */
+.footer-head{
+    text-align: center;
+    border: 1px solid #cccccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: rgb(27, 26, 26);
+
+
+}
+.mexty a:hover{
+text-decoration: underline;
+}
+.mexty h4{
+    color:rgb(27, 26, 26); 
+    font-weight: lighter;
+    max-width: 100%;
+    font-size: 15px;
+    padding: 15px;
+}
+.mexty a{
+    text-decoration: none;
+    color: #40b3ff;
+
+}
+.footer-head::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+/* @media only screen and (max-width: 480px) {
+    .texty-2 span hr {
+      width: 80px;
+    }
+    .texty input{
+        width: 250px;
+     
+    }
+    .texty button{
+     
+        width: 250px;
+     
+       
+    }
+    #one hr{
+       
+        right: 65px;
+    }
+    #two hr{
+      
+        left: 65px;
+    }
+
+
   }
   
-  .signup-link a:hover {
-    text-decoration: underline;
-  }
+  
+  
+  
+   */
+  
   

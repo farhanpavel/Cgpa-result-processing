@@ -1,10 +1,9 @@
 body{
    background-image: url(../image/Jahangirnagar\ University\ \(1\).jpeg);
- 
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center top;
-
+   background-attachment: fixed;
 } 
 .header-head {
    background-color: rgba(0, 0, 0, 0.4);
@@ -29,8 +28,9 @@ body{
    background-color: rgba(0, 0, 0, 0.5);
    padding: 20px;
    display: inline-block;
-   margin-bottom: 20px;
+   margin-bottom: 2vw;
    animation: fadeIn 2s ease;
+   font-size: 3.2vw;
  }
  @keyframes fadeIn {
    0% {
@@ -62,7 +62,7 @@ body{
 }
 .main-body h2 {
    color: white;
-   font-size: 24px;
+   font-size: 1.9vw;
    margin-bottom: 30px;
  }
 
@@ -74,7 +74,7 @@ body{
  }
 
  .main-body .buttons button {
-   padding: 10px 20px;
+   padding: 0.8vw 1.7vw;
    background-color: #445813;
    border-radius: 7px;
    color: white;
@@ -193,6 +193,53 @@ body{
   }
  
  }
+
+ /* @media screen and (max-width: 1200px) {
+  body{
+    padding-bottom: 10vw;
+  }
+ 
+}
+@media screen and (max-width: 1000px) {
+  body{
+    padding-bottom: 20vw;
+  }
+   .main-head {
+    margin-top: 10vw;
+    text-align: center;
+  }
+  .banner {
+    margin-top: 10vw;
+  }
+  .main-body h2 {
+    margin-top: 10vw;
+  } 
+
+
+}
+
+
+
+
+ @media screen and (max-width: 600px) {
+  body{
+    padding-bottom: 30vw;
+  }
+  /* .main-head {
+    margin-top: 50vw;
+    text-align: center;
+  }
+  .banner {
+    margin-top: 20vw;
+  }
+  .main-body h2 {
+    margin-top: 20vw;
+  } */
+ 
+} */
+
+
+
 
 
 

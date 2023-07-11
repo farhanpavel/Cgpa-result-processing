@@ -21,7 +21,7 @@ function addRow() {
     row.parentNode.removeChild(row);
   });
   
-  // Retrieve the input fields for the new row
+ 
   var firstExaminerInput = newRow.querySelector('td:nth-child(4) input');
   var secondExaminerInput = newRow.querySelector('td:nth-child(5) input');
   var thirdExaminerInput = newRow.querySelector('td:nth-child(6) input');
@@ -29,7 +29,7 @@ function addRow() {
   // Set the initial background color to 'bg-secondary'
   thirdExaminerInput.classList.add('bg-secondary');
   
-  // Disable the third examiner input field initially
+ 
   thirdExaminerInput.disabled = true;
   
   // Add event listeners to the 1st and 2nd examiner input fields

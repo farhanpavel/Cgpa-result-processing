@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #f5f5f5;
+    
+}
+.sub-shob h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: gold;
+    font-size: 4vw;
+
+}
+.sub-shob h2{
+    text-align: center;
+    font-size: 1vw;
+    
+}
+
+
+
+.shob-four{
+    margin-top: 8vw;
+    padding: 6vw;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+.shob{
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 2vw;
+  
+}
+.shob-four button{
+    background-color: gold;
+    outline: none;
+    border: none;
+    font-size: 1.5vw;
+}
+.shob-four button:hover{
+    background-color: gold;
+}
+.shob-four h5{
+    font-size: 1.5vw;
+}
+@media screen and (max-width: 420px) {
+    .sub-shob h2 {
+        font-size: 0.7vw;
+    }
+    .sub-shob h1{
+        font-size: 2.7vw;
+    
+    }
+}
+.shob-five{
+    margin-top: 10.5%;
+}
+.shob-five h5{
+    text-align: center;
+    font-size: 0.9vw;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}

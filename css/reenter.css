@@ -1,5 +1,5 @@
 *{
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif;
     overflow: hidden;
 }
 .header-head{
@@ -12,12 +12,13 @@
     margin-top: 10px;
     color: rgb(27, 26, 26);
     width: 400px; 
+    height: 450px;
 
 }
 
 .footer-head{
 margin-top: 10px;
-width: 500px; 
+width: 400px; 
 
 }
 .header-head img{
@@ -67,12 +68,12 @@ width: 500px;
   width: 150px;
 
 }
-#one hr{
+.header-head #one hr{
     position: relative;
     top:25px;
     right: 90px;
 }
-#two hr{
+.header-head #two hr{
     position: relative;
     top:-40.5px;
     left: 90px;
@@ -139,10 +140,3 @@ text-decoration: underline;
     display: table;
     content: '';
 }
-
-  
-  
-  
-  
-  
-  
