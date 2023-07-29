@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+    font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+}
+/* .header-head {
+   background-color: #00beff;
+    
+} */
+.row{
+    margin: 0px;
+}
+.just{
+    background-color: #0d6efd;
+    padding: 2px;
+}
+.header-head .header-data h1{
+   font-size: 2vw;
+  color: white;
+  font-weight: bold;
+   background-color: #0d6efd;
+   display: inline-block;
+   padding: 30px;
+}
+.header-head .naving ul{
+list-style: none;
+text-decoration: none;
+}
+.header-head .naving{
+    margin-top: 1vw;
+    
+}
+.header-head .naving ul li{
+    display: inline;
+    padding: 5px;
+    margin-left: 15px;
+}
+.header-head .naving ul li a {
+    text-decoration: none;
+    color: rgb(16, 14, 14);
+    /* Add a transparent border to offset the background color change */
+    border: 2px solid transparent;
+    border-radius: 7px;
+    padding: 9px;
+    font-size: 1.25vw;
+}
+.header-head .naving ul li a:hover {
+    background-color: #0d6efd;
+    padding: 9px;
+    border: 2px solid transparent;
+    color: white;
+}
+.changer-one{
+    margin-top: 60px;
+    
+}
+.changer-one h2{
+    font-size: 1.5vw;
+    font-weight: bolder;
+}
+.changer-two{
+    margin-top: 40px;
+}
+.changer-two h2{
+    font-size: 1.5vw;
+    font-weight: bolder;
+}
+.changer-three{
+    margin-top: 20px;
+}
+.dead-body{
+    margin-top: 10%;
+}
+.dead-body .accordion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.dead-body h1{
+    
+    text-align: center;
+    font-size: 2vw;
+    font-weight:600;
+    margin-bottom: 4%;
+}
+.last{
+    margin-top: 12%;
+    background-color: #2e2828;
+    padding: 9px;
+}
+.another-last{
+    /* margin-left: 30px; */
+    font-weight: bold;
+    color: white;
+}
+
+.last h3{
+    font-size: 20px;
+}
+.last img{
+    width: 100px;
+    margin-top: 20px;
+} 

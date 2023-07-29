@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,55 +8,305 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
   <!-- Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <!-- External CSS -->
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Main Page</title>
+  <script src="https://kit.fontawesome.com/463b3f8166.js" crossorigin="anonymous"></script>
+   <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   <!-- External CSS -->
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Homepage</title>
   
 </head>
 
 <body>
-  <header>
-    <div class="header-head">
-      <div class="logo">
-        <img class="d-block m-auto m-lg-0 m-md-0 m-sm-0" src="./image/IIT Loog.png" alt="">
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="main-head">
-      <h1 class="animate__animated animate__fadeIn">CGPA RESULT PROCESSING SYSTEM</h1>
-    </div>
-    <div class="main-body animate__animated animate__slideInTop">
-      <h2>Sick of manual CGPA calculations? You're in the right spot!</h2>
-      <div class="buttons">
-        <button onclick="playClickSound(); showLoader('./templates/login.html')">LOG IN</button>
-        <button onclick="playClickSound(); showLoader('./templates/registration.html')">REGISTRATION</button>
-      </div>
-      <div class="banner mb-5">
-        <marquee behavior="scroll" direction="left">
-          📢📢Welcome To IIT Official CGPA Result Processing System!📢📢
-        </marquee>
-      </div>
-    </div>
-  </main>
-  <footer>
+     <header>
+      
+        <div class="header-head">
+            <div class="just">
 
-  </footer>
-  <script src="./js/main.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+            </div>
+            <div class="row">
+            <div class="header-data col-lg-7 col-md-5 col-sm-4 ">
+                <div><h1>CGPA RESULT PROCESSING</h1></div>
+            </div>
+            <div class="naving col-lg-5 col-md-7 col-sm-8 ">
+                <nav class="navbar navbar-expand-sm">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-center mt-4 mt-sm-0 mt-md-0 mt-lg-0 " >
+                        <li><a   href="#home">Home</a></li>
+                        <li><a  href="#guide">Guide</a></li>
+                        <li > <a  href="#about">About Us</a></li>
+                        <li><a   href="#contact">Contact</a></li>
+                        <li><a  href="#faqs">FAQs</a></li>
+                    </ul>
+                  </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+     </header>
+    <main>
+        <section id="home">
+        <div class="main-head">
+           
+            <div class="row">
+            <div class="data col-lg-7">
+                <h1>Wanna Check You're Result ?</h1>
+                <p>This CGPA Result Processing System helps you to calculate your CGPA result instantly!</p>
+                <div class="mt-3 ">
+                  <button class="btn btn-primary" onclick="goToPage('./templates/login.html')">Sign In</button>
+                  <button class="btn btn-outline-primary" onclick="goToPage('./templates/registration.html')">Sign Up</button></div>
+            </div>
+            <div class="gifi col-lg-4">
+                <img src="./image/image_processing20210502-32669-19wxkba.gif"  alt="">
+            </div>
+        </div>
+    
+        </div>
+        </section>
+        <section id="guide">
+        <div class="main-headtwo">
+            <div class="row">
+            <div class="gifi col-lg-7">
+                <img src="./image/image_processing20210510-2700-1oal4i5.gif"  alt="">
+            </div>
+            <div class="data-two col-lg-4">
+                <p>
+                    Many students have a question that how to use the CGPA Calculator? What is the Full Meaning of CGPA?Here I am going to share how to calculate CGPA and The CGPA full meaning... 
+                </p>
+                <button class="btn btn-primary" onclick="goToPage('./templates/guide.html')">See More</a></button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="main-body">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators ">
+              <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-primary one" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-primary two" aria-label="Slide 2"></button>
+            
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                <div class="col-lg-6 ">
+                <img src="./image/pavel2.jpg" class="d-inline " alt="...">
+            </div>
+            <div class="col-lg-4 ">
+                <p >
+                Hello, I am <strong>Farhan Pavel</strong> ,I am currently pursuing my my undergraduate degree in Information Technology at Jahangirnagar University. With a passion for web development and a keen interest in competitive programming, I strive to continuously enhance my skills in these areas.
+                </p>
+                <div class="d-inline moja">
+                <a href="https://www.facebook.com/profile.php?id=100009330569436"><i class="fa-brands fa-facebook fa-2xl" style="color: #005af5;"></i></a>
+                <a href="https://github.com/FarhanPavel"><i class="fa-brands fa-github fa-2xl" style="color: #005af5;"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin fa-2xl" style="color: #0054e6;"></i></a>
+            </div>
+            </div>
+            </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                    <div class="col-lg-6">
+                    <img src="./image/walid2.jpg" class=" d-inline" alt="...">
+                </div>
+                <div class="col-lg-4 ">
+                    <p >
+                    Hello, I am <strong>Walid Hasan</strong> a student of IIT-JU. I'm currently studying BSc. In information and communication technology. I love to make desktop based applications and webpages as competitive programming never drew my interest.As playing games been my interest for long, i plan to make some games on my own and play them. 
+                    </p>
+                    <div class="d-inline moja">
+                    <a href="https://www.facebook.com/walid6842"><i class="fa-brands fa-facebook fa-2xl" style="color: #005af5;"></i></a>
+                    <a href="https://github.com/Walid2046IIT"><i class="fa-brands fa-github fa-2xl" style="color: #005af5;"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin fa-2xl" style="color: #0054e6;"></i></a>
+                </div>
+                </div>
+                </div>
+              </div>
+             
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" >
+              <span class="carousel-control-prev-icon bg-primary" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" >
+              <span class="carousel-control-next-icon bg-primary" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="main-two ">
+                <h1 >Contact</h1>
+                <form class="p-3  text-white w-50 d-block  was-validated " action="mailto:anisul2010s@yahoo.co.uk" method="post" enctype="text/plain" >
+                    <div class="mb-3 changer">
+                    <label for="Name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control " name="fullname" required>
+                   </div>
+                    <div class="mb-3 ">
+                    <label for="Email"class="form-label">Email</label>
+                    <input type="Email" class="form-control" name="email" required>
+                </div>
+                <div class="mb-3 ">
+                    <label for="Email"class="form-label">Message</label>
+                    <textarea class="form-control done" name="" id="" cols="31" rows="7"></textarea>
+                </div>
+                <div class="text-center ">
+                    <button class="btn bg-primary text-white mb-2 m-sm-0">Submit</button>
+                    <button class="btn bg-primary text-white">Reset</button>
+                </div>
+
+                </form>
+            </div>
+       
+        </section>
+            <!-- FAQS -->
+            <section id="faqs">
+            <div class="dead-body">
+                <h1>FAQs</h1>
+                <div class="accordion " id="accordionExample">
+                    <div class="accordion-item w-75">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Is This Result Calculation is Approved For Every University?
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>No</strong>,We Have Design This Calculation System only for our Institute?
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item  w-75">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          What Was the Difference Between GPA and CGPA?
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                         CGPA (Cumulative Grade Point Average) represents the overall average of a student's grades across all courses taken throughout their academic career, whereas GPA (Grade Point Average) typically refers to the average of a student's grades within a specific term or semester.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item  w-75">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Is This Result Is 100% Correct Or Not?
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Nothing is 100% correct in this world , But as a Developer We tried Our Best to make it 100% Correct .
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item  w-75">
+                        <h2 class="accordion-header" id="headingFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Can We get a Updated Version Of this Website In Future ?
+                          </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            Ask or Email <strong>Farhan Pavel</strong>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <div class="accordion-item  w-75">
+                        <h2 class="accordion-header" id="headingFive">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">                    
+                    How often should I calculate my CGPA?
+                          </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            It is recommended to calculate your CGPA at the end of each term or semester to track your academic progress accurately.
+                          </div>
+                        </div>
+                      </div>
+                  
+                  
+
+                      <div class="accordion-item  w-75">
+                        <h2 class="accordion-header" id="headingSix">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            How can I convert my CGPA to a percentage?
+                          </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            The conversion from CGPA to a percentage varies between universities. Usually, universities provide a conversion table or formula for this purpose.It's Better to see the guide manual of our website
+                          </div>
+                        </div>
+                      </div>
+                  
+
+
+                      <div class="accordion-item  w-75">
+                        <h2 class="accordion-header" id="headingSeven">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            What if I have a course with a Pass/Fail grading system?
+                          </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            Pass/Fail courses are typically not factored into the CGPA calculation since they are not assigned numeric grades.
+                          </div>
+                        </div>
+                      </div>
+                  
+
+                      <div class="accordion-item  w-75">
+                        <h2 class="accordion-header" id="headingEight">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            How does my CGPA affect my academic standing?
+                          </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            CGPA often determines academic standing, such as academic probation, honors, or eligibility for certain programs. It reflects overall academic performance.
+                          </div>
+                        </div>
+                      </div>
+                  
+
+                  
+                    </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="last row ">
+          <div class="col-lg-10 mt-4 another-last ms-lg-3 text-center text-lg-start">
+            <h3>Institute Of Information Technology</h3>
+            <p>Jahangirnagar University, Savar, Dhaka-1342, Bangladesh.</p>
+           
+            <a href="#"><i class="fa-brands fa-facebook fa-2xl p-lg-1 p-0" style="color: #005af5;"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin fa-2xl p-lg-1 p-0" style="color: #005af5;"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter fa-2xl p-lg-1 p-0" style="color: #005af5;"></i></a>
+        
+          </div>  
+          <div class="col-lg-1 text-center">
+           <img src="./image/IIT-logo.jpg" alt="">
+             
+          </div>
+          <hr class="text-white mt-3">
+          <p class="text-center text-white">© Farhan Pavel & Walid Hasan</p>
+        </div>
+        
+    </footer>
+
+   
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

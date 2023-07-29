@@ -1,0 +1,210 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+    font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+}
+/* .header-head {
+   background-color: #00beff;
+    
+} */
+.row{
+    margin: 0px;
+}
+.valoi a:hover{
+    color:white;
+
+}
+.just{
+    background-color: #0d6efd;
+    padding: 2px;
+}
+.header-head .header-data h1{
+   font-size: 2vw;
+  color: white;
+  font-weight: bold;
+   background-color: #0d6efd;
+   display: inline-block;
+   padding: 30px;
+}
+.header-head .naving ul{
+list-style: none;
+text-decoration: none;
+}
+.header-head .naving{
+    margin-top: 1vw;
+    
+}
+.header-head .naving ul li{
+    display: inline;
+    padding: 5px;
+    margin-left: 15px;
+}
+.header-head .naving ul li a {
+    text-decoration: none;
+    color: rgb(16, 14, 14);
+    /* Add a transparent border to offset the background color change */
+    border: 2px solid transparent;
+    border-radius: 7px;
+    padding: 9px;
+    font-size: 1.25vw;
+}
+.header-head .naving ul li a:hover {
+    background-color: #0d6efd;
+    padding: 9px;
+    border: 2px solid transparent;
+    color: white;
+}
+.main-head .data{
+    margin-left: 10px;
+}
+.main-head .data .one{
+background-color:red ;
+}
+.main-head .data h1{
+    font-size: 4vw;
+    margin-top: 10vw;
+}
+.main-head .data p{
+    font-size: 1.8vw;
+}
+.main-head .gifi img{
+    width: 500px;
+}
+.main-headtwo{
+    margin-top: 10vw;
+}
+.main-headtwo .gifi img{
+    width: 600px;
+   
+}
+.main-headtwo .data-two p{
+    margin-top: 11vw;
+    font-size: 	1.52vw;
+
+}
+.main-body{
+    margin-top: 12vw;
+    margin-bottom: 10vw;
+}
+
+.carousel-item img{
+    width: 300px;
+    margin-left: 15vw;
+}
+.carousel-item p{
+    margin-top: 10vw;
+  
+    color: black;
+}
+
+.moja i{
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.carousel-indicators button {
+position: relative;
+top: 80px;
+}
+ .main-two {
+    margin-top: 15%;
+}
+.main-two h1{
+    text-align: center;
+    font-size: 2vw;
+    font-weight:600;
+
+}
+.main-two form{
+    display: block;
+    margin: 0 auto;
+}
+.main-two label{
+    color: black;
+}
+.dead-body{
+    margin-top: 10%;
+}
+.dead-body .accordion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.dead-body h1{
+    
+    text-align: center;
+    font-size: 2vw;
+    font-weight:600;
+    margin-bottom: 4%;
+}
+.last{
+    margin-top: 12%;
+    background-color: #2e2828;
+    padding: 9px;
+}
+.another-last{
+    /* margin-left: 30px; */
+    font-weight: bold;
+    color: white;
+}
+
+.last h3{
+    font-size: 20px;
+}
+.last img{
+    width: 100px;
+    margin-top: 20px;
+} 
+@media screen and (max-width: 1190px) and (min-width: 1000px) {
+    .header-head .naving ul li a {
+        font-size: 0.9vw; /* Font size for screens between 1190px and 1015px */
+    }
+}
+@media screen and (max-width:500px) {
+    .main-two {
+        margin-top: 20%;
+    }
+    .carousel-item img{
+        width: 150px;
+       
+    }
+
+}
+@media screen and (max-width:400px) {
+    .main-two {
+        margin-top: 25%;
+    }
+   
+}
+@media screen and (min-width:1900px) {
+    .carousel-item img{
+        width: 450px;
+       
+    }
+    .main-headtwo .data-two p{
+        margin-top: 6vw;
+     
+    
+    }
+    .main-head .gifi img{
+        width: 700px;
+    } 
+    .main-headtwo .gifi img{
+        width: 700px;
+    }
+}
+@media screen and (max-width:610px) {
+
+    .main-head .gifi img{
+        width: 350px;
+    }
+    .main-headtwo .gifi img{
+        width: 350px;
+    }
+}
