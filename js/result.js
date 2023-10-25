@@ -13,6 +13,7 @@ function calculateCGPA() {
       var third = parseFloat(row.querySelector('td:nth-child(6) input').value);
       var credit = parseFloat(row.querySelector('td:nth-child(3) input').value);
       var incourseMark = parseFloat(row.querySelector('input[type="text"][placeholder="Incourse Mark"]').value);
+      // var final = parseFloat(row.querySelector('td:nth-child(7) input').value);
   
       // Check if the values are valid numbers
       if (!isNaN(first) && !isNaN(second) && !isNaN(incourseMark)) {
@@ -38,6 +39,9 @@ function calculateCGPA() {
                     totalSum += (first + second) / 2;
                 }
             }
+            var lastCell = row.querySelector('td:nth-child(7)'); 
+            lastCell.innerText = totalSum.toFixed(2);
+
 
             if (totalSum >= 80 && totalSum <= 100) {
                 totalSum = 4;
@@ -128,6 +132,10 @@ function addRow() {
     var difference = Math.abs(firstExaminerValue - secondExaminerValue);
   
     // Enable or disable the 3rd examiner input field based on the difference
+    
+    //pavel
+
+
     if (difference >= 12) {
       thirdExaminerInput.disabled = false;
       thirdExaminerInput.classList.remove('bg-secondary');
