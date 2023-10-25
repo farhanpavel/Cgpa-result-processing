@@ -28,7 +28,7 @@
                     <tr>
                         <td><input type="text" placeholder="Subject Name"></td>
                         <td><input type="text" placeholder="Incourse Mark"></td>
-                        <td><input type="text" placeholder="Credit"></td>
+                        <td><input type="text" id="credit" placeholder="Credit"></td>
                         <td><input type="text" id="examiner1" placeholder="1st Examiner"></td>
                         <td><input type="text" id="examiner2" placeholder="2nd Examiner"></td>
                         <td><input class="bg-secondary" type="text" id="examiner3" placeholder="3rd Examiner" disabled></td> 
@@ -36,8 +36,10 @@
                     </tr>
                 </table>
             </div>
-            <button class="btn btn-info text-white" onclick="addRow()">Add</button>
-            <button class="btn btn-info text-white">View Result</button>
+            <button class="btn btn-info text-white"  onclick="addRow()">Add</button>
+            <button class="btn btn-info text-white" onclick="calculateCGPA()">View Result</button>
+           <div id="result"></div>
+
         </div>
          <div class="text-center shob-three">
             <h1 >Check By Excel File</h1>

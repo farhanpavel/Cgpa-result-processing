@@ -1,4 +1,88 @@
-///This Function is Used For the adding button.
+function calculateCGPA() {
+    var tableRows = document.querySelectorAll('.changer tr'); // Get all rows in the table
+    var totalSum = 0;
+    var totalSum2 = 0;
+     var totalCredit=0;
+     var flag2=0;
+     var flag = 0;
+    // Iterate through each row and calculate total marks
+    tableRows.forEach(function(row) {
+      
+      var first = parseFloat(row.querySelector('td:nth-child(4) input').value);
+      var second = parseFloat(row.querySelector('td:nth-child(5) input').value);
+      var third = parseFloat(row.querySelector('td:nth-child(6) input').value);
+      var credit = parseFloat(row.querySelector('td:nth-child(3) input').value);
+      var incourseMark = parseFloat(row.querySelector('input[type="text"][placeholder="Incourse Mark"]').value);
+  
+      // Check if the values are valid numbers
+      if (!isNaN(first) && !isNaN(second) && !isNaN(incourseMark)) {
+        totalSum = incourseMark;
+
+            var pavel = Math.abs(first - second);
+
+            if (pavel >= 12 && !isNaN(first) && !isNaN(second)) {
+                var pavel2 = Math.abs(third - first);
+                var pavel3 = Math.abs(third - second);
+
+                if (pavel2 > pavel3 && !isNaN(third) && !isNaN(second)) {
+                    totalSum += (second + third) / 2;
+                } else if (!isNaN(third) && !isNaN(second)) {
+                    totalSum += (first + third) / 2;
+                } else {
+                    totalSum += first;
+                }
+            } else {
+                if (isNaN(third) && isNaN(second)) {
+                    totalSum += first;
+                } else {
+                    totalSum += (first + second) / 2;
+                }
+            }
+
+            if (totalSum >= 80 && totalSum <= 100) {
+                totalSum = 4;
+            } else if (totalSum >= 75 && totalSum < 80) {
+                totalSum = 3.75;
+            } else if (totalSum >= 70 && totalSum < 75) {
+                totalSum = 3.5;
+            } else if (totalSum >= 65 && totalSum < 70) {
+                totalSum = 3.25;
+            } else if (totalSum >= 60 && totalSum < 65) {
+                totalSum = 3;
+            } else if (totalSum >= 55 && totalSum < 60) {
+                totalSum = 2.75;
+            } else if (totalSum >= 50 && totalSum < 55) {
+                totalSum = 2.5;
+            } else if (totalSum >= 45 && totalSum < 50) {
+                totalSum = 2.25;
+            } else if (totalSum >= 40 && totalSum < 45) {
+                totalSum = 2;
+            } else {
+                totalSum = 0;
+                flag = 1;
+                flag2=1;
+            }
+            totalCredit+=credit;
+            totalSum2+=totalSum*credit;
+
+      }
+    });
+     totalSum2=(totalSum2/totalCredit);
+     if(flag2==0)
+     {
+    // Display the total marks in the result div
+    document.getElementById('result').innerHTML = 'CGPA: ' + totalSum2.toFixed(2);
+     }
+    else
+    {
+
+      document.getElementById('result').innerHTML = 'Failed...!!!';
+    }
+  }
+  
+
+
+
 function addRow() {
   var table = document.querySelector('.changer'); // Get the table element
   var newRow = table.insertRow(table.rows.length); // Insert a new row at the end of the table
@@ -247,4 +331,3 @@ stars.forEach(function(star, index) {
     }, 2000);
   });
 });
-// number check
