@@ -172,113 +172,6 @@ function enableThirdExaminer() {
   }
 }
 //This part is used for excell file reader
-function handleFileDrop(event) {
-  event.preventDefault();
-  const file = event.dataTransfer.files[0];
-  handleFileSelect(file);
-}
-
-function browseFile() {
-  const fileInput = document.getElementById('fileInput');
-  fileInput.click();
-}
-
-function handleFileSelect(file) {
-  const reader = new FileReader();
-
-  reader.onload = function(e) {
-    const data = new Uint8Array(e.target.result);
-    const workbook = XLSX.read(data, { type: 'array' });
-
-    const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-    const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-
-    const table = document.getElementById('dataTable');
-
-    // Clear existing rows except the header row
-    while (table.rows.length > 1) {
-      table.deleteRow(1);
-    }
-
-    // Populate the table with data from the Excel file
-    for (let i = 0; i < jsonData.length; i++) {
-      const newRow = table.insertRow(i + 1);
-    
-      for (let j = 0; j < jsonData[i].length; j++) {
-        const cellValue = jsonData[i][j];
-        const newCell = newRow.insertCell(j);
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.value = cellValue;
-        newCell.appendChild(input);
-      }
-    
-      const deleteIconCell = newRow.insertCell();
-      deleteIconCell.style.border = 'none';
-      deleteIconCell.style.outline = 'none';
-      deleteIconCell.innerHTML = '<i class="fa-regular fa-circle-xmark fa-2xl delete-icon"></i>';
-    
-      const deleteIcon = deleteIconCell.querySelector('.delete-icon');
-      deleteIcon.addEventListener('click', function() {
-        const row = this.parentNode.parentNode;
-        row.parentNode.removeChild(row);
-      });
-    
-      const firstExaminerInput = newRow.querySelector('td:nth-child(4) input');
-      const secondExaminerInput = newRow.querySelector('td:nth-child(5) input');
-      const thirdExaminerInput = newRow.querySelector('td:nth-child(6) input');
-    
-      thirdExaminerInput.classList.add('bg-secondary');
-      thirdExaminerInput.disabled = true;
-    
-      firstExaminerInput.addEventListener('input', handleExaminerInputChange);
-      secondExaminerInput.addEventListener('input', handleExaminerInputChange);
-    
-      function handleExaminerInputChange() {
-        const firstExaminerValue = parseFloat(firstExaminerInput.value);
-        const secondExaminerValue = parseFloat(secondExaminerInput.value);
-    
-        const difference = Math.abs(firstExaminerValue - secondExaminerValue);
-    
-        if (difference >= 12) {
-          thirdExaminerInput.disabled = false;
-          thirdExaminerInput.classList.remove('bg-secondary');
-          thirdExaminerInput.style.backgroundColor = 'white';
-        } else {
-          thirdExaminerInput.disabled = true;
-          thirdExaminerInput.classList.add('bg-secondary');
-          thirdExaminerInput.style.backgroundColor = '';
-        }
-      }
-    
-      // Dispatch input event manually after event listeners are set
-      const event = new Event('input');
-      firstExaminerInput.dispatchEvent(event);
-      secondExaminerInput.dispatchEvent(event);
-    }
-
-    const fileContainer = document.getElementById('fileContainer');
-    fileContainer.classList.add('active');
-
-    fileContainer.scrollIntoView({ behavior: 'smooth' });
-
-    const fileName = file.name;
-    displayFileName(fileName);
-  };
-
-  reader.readAsArrayBuffer(file);
-}
-
-function browseFile() {
-  const fileInput = document.getElementById('fileInput');
-  fileInput.click();
-}
-
-
-function displayFileName(fileName) {
-  var box = document.querySelector('.shob-four');
-  box.querySelector('h5').textContent = fileName;
-}
 
 // this Function used to show the message box
 function showMessage() {
@@ -339,3 +232,7 @@ stars.forEach(function(star, index) {
     }, 2000);
   });
 });
+function goToPage(url) {
+  // Navigate to the specified URL
+  window.location.href = url;
+}

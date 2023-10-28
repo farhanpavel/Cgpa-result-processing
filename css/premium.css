@@ -1,29 +1,76 @@
+
 *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+    font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+  }
+  .row{
     margin: 0px;
-    padding: 0px;
-}
-body{
-    background-color: #f5f5f5;
-    
-}
+  }
+  .valoi a:hover{
+    color:white;
+  
+  }
+  .just{
+    background-color: #0d6efd;
+    padding: 2px;
+  }
+  .header-head .header-data h1{
+    font-size: 2vw;
+   color: white;
+   font-weight: bold;
+    background-color: #0d6efd;
+    display: inline-block;
+    padding: 30px;
+    font-family: 'Rubik', sans-serif;
+  }
+  .header-head .naving ul{
+  list-style: none;
+  text-decoration: none;
+  }
+  .header-head .naving{
+     margin-top: 1vw;
+     
+  }
+  .header-head .naving ul li{
+     display: inline;
+     padding: 5px;
+     margin-left: 15px;
+  }
+  .header-head .naving ul li a {
+     text-decoration: none;
+     color: rgb(16, 14, 14);
+     /* Add a transparent border to offset the background color change */
+     border: 2px solid transparent;
+     border-radius: 7px;
+     padding: 9px;
+     font-size: 1.25vw;
+  }
+  .header-head .naving ul li a:hover {
+     background-color: #0d6efd;
+     padding: 9px;
+     border: 2px solid transparent;
+     color: white;
+  }
 .sub-shob h1{
     text-align: center;
-    margin-bottom: 20px;
-    color: gold;
-    font-size: 4vw;
-
+  
+    color: #0d6efd;
+    font-size: 3vw;
+    font-weight: bolder;
 }
 .sub-shob h2{
     text-align: center;
-    font-size: 1vw;
-    
+    font-size: 1vw;   
 }
 
 
 
 .shob-four{
     margin-top: 8vw;
-    padding: 6vw;
+    padding: 5vw;
     background-color: #FFFFFF;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.15);
     text-align: center;
@@ -34,15 +81,7 @@ body{
     margin-top: 2vw;
   
 }
-.shob-four button{
-    background-color: gold;
-    outline: none;
-    border: none;
-    font-size: 1.5vw;
-}
-.shob-four button:hover{
-    background-color: gold;
-}
+
 .shob-four h5{
     font-size: 1.5vw;
 }
@@ -55,3 +94,21 @@ body{
     
     }
 }
+.last{
+    margin-top: 6%;
+    background-color: #2e2828;
+    padding: 9px;
+  }
+  .another-last{
+    /* margin-left: 30px; */
+    font-weight: bold;
+    color: white;
+  }
+  
+  .last h3{
+    font-size: 20px;
+  }
+  .last img{
+    width: 100px;
+    margin-top: 20px;
+  } 

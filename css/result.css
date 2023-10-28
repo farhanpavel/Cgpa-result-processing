@@ -1,5 +1,57 @@
-body{
-    background-color: #f5f5f5;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;   
+  font-family: 'Rubik', sans-serif;
+  scroll-behavior: smooth;
+}
+.row{
+  margin: 0px;
+}
+.valoi a:hover{
+  color:white;
+
+}
+.just{
+  background-color: #0d6efd;
+  padding: 2px;
+}
+.header-head .header-data h1{
+  font-size: 2vw;
+ color: white;
+ font-weight: bold;
+  background-color: #0d6efd;
+  display: inline-block;
+  padding: 30px;
+  font-family: 'Rubik', sans-serif;
+}
+.header-head .naving ul{
+list-style: none;
+text-decoration: none;
+}
+.header-head .naving{
+   margin-top: 1vw;
+   
+}
+.header-head .naving ul li{
+   display: inline;
+   padding: 5px;
+   margin-left: 15px;
+}
+.header-head .naving ul li a {
+   text-decoration: none;
+   color: rgb(16, 14, 14);
+   /* Add a transparent border to offset the background color change */
+   border: 2px solid transparent;
+   border-radius: 7px;
+   padding: 9px;
+   font-size: 1.25vw;
+}
+.header-head .naving ul li a:hover {
+   background-color: #0d6efd;
+   padding: 9px;
+   border: 2px solid transparent;
+   color: white;
 }
 .premium{
   margin-top: 40px;
@@ -22,7 +74,7 @@ body{
 margin-bottom: 80px;
 }
 .start h5{
-    font-family: Inter, sans-serif;
+  
     font-weight: lighter;
     color: #666666;
     font-size: 1.3vw;
@@ -33,11 +85,15 @@ margin-bottom: 80px;
     margin-top: 2%;
 }
 .start h1{
-font-family: Inter, sans-serif;
-font-weight: bolder;
-font-size: 4vw;
-}
 
+font-weight: bolder;
+font-size: 3vw;
+color: #0d6efd;
+}
+.start h5{
+  font-size: 1vw;
+  }
+  
 .shob-two {
     background-color: #FFFFFF;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.15);
@@ -52,16 +108,15 @@ input{
     margin-bottom: 20px;
     text-align: center;
 }
-.shob-three h1{
-font-family: Inter, sans-serif;
-font-weight: bolder;
-font-size: 4vw;
+.premium{
+  background-color: #0d6efd;
+  color: white;
+  width: 35%;
+  padding: 20px;
+  border-radius: 7px;
 }
-.shob-three h5{
-    font-family: Inter, sans-serif;
-    font-weight: lighter;
-    color: #666666;
-    font-size: 1.3vw;
+.premium a{
+  color: black;
 }
 .changer td,tr{
   border: 1px solid #cccc;
@@ -167,3 +222,21 @@ cursor: pointer;
   font-size: 1.5vw;
 
 }
+.last{
+  margin-top: 12%;
+  background-color: #2e2828;
+  padding: 9px;
+}
+.another-last{
+  /* margin-left: 30px; */
+  font-weight: bold;
+  color: white;
+}
+
+.last h3{
+  font-size: 20px;
+}
+.last img{
+  width: 100px;
+  margin-top: 20px;
+} 
